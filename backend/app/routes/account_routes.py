@@ -27,7 +27,7 @@ def logout():
 @bp.route('/useraccount/', methods=['GET'])
 @cross_origin()
 @jwt_required()
-def get_recipes():
+def get_account():
     # Get current user's public ID from JWT token
     user_public_id = get_jwt_identity()
 
@@ -49,5 +49,7 @@ def get_recipes():
             'username': user.username,
             'email': user.email,
         }
+    
+    print(user)
 
     return jsonify({'user': serialized_user}), 200
