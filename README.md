@@ -1,8 +1,12 @@
-# Recipe Box
+# Recipe Box 
+
 
 **Recipe Box** is the senior design project of Lilian Swann and Fatima Bowers. 
 
 **Recipe Box** is a website designed to store, organize, and manage recipes. Users can add their own recipes, categorize them into sections, pin favorite recipes to the homepage, and search for recipes effortlessly.
+
+## Live Demo
+You can try out the live version of the project hosted on Github Pages: [Recipe Box](https://fzbowers.github.io/recipebox/)
 
 ## Features
 - **Add Recipes**: Create and save personal recipes with ease.
