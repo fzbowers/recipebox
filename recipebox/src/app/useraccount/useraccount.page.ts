@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
 import { ApiService } from '../services/api.service';
@@ -28,9 +28,20 @@ export class UseraccountPage implements OnInit {
     this.username = '';
   }
 
-  ngOnInit() {
-    this.loadUserInfo()
-  } 
+    ngOnInit() {
+      // maybe use different implementation
+      this._router.events.subscribe(event => {
+        // Check if it's a NavigationEnd event
+        if (event instanceof NavigationEnd) {
+          // Check if the current route is the home page
+          if (event.url === '/useraccount') {
+            // reload
+            this.loadUserInfo();
+          }
+        }
+      });
+    }
+
 
   ionChange(event: any) {
     console.log("search event: ", event.detail.value)
@@ -45,8 +56,8 @@ export class UseraccountPage implements OnInit {
         this.user = response.user;
         this.email = this.user.email;
         this.username = this.user.username;
-        console.log(this.username)
-        console.log(this.email)
+        console.log(this.username);
+        console.log(this.email);
       },
       error: (error) => {
         console.error('Error getting user:', error);
