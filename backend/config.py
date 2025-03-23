@@ -1,6 +1,7 @@
 import os
 
 class Config:
+    DEBUG = False
     # has instructions for setting secret key --> https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'your_secret_key'
 
