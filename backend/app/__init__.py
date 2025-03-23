@@ -8,7 +8,7 @@ def create_app():
     app.config.from_object(Config)
 
     db.init_app(app)
-    cors.init_app(app, origins=["https://fzbowers.github.io"])
+    cors.init_app(app, origins=["https://fzbowers.github.io", "http://localhost:8100"])
     admin.init_app(app)
     migrate.init_app(app, db)
     bcrypt.init_app(app)
