@@ -8,7 +8,7 @@ def create_app():
     app.config.from_object(Config)
 
     db.init_app(app)
-    cors.init_app(app)
+    cors.init_app(app, origins=["https://fzbowers.github.io"])
     admin.init_app(app)
     migrate.init_app(app, db)
     bcrypt.init_app(app)
@@ -26,7 +26,7 @@ def create_app():
     app.register_blueprint(features_routes.bp)
     # app.register_blueprint(auth.auth_bp)
 
-    with app.app_context():
-        db.create_all()
+    # with app.app_context():
+    #     db.create_all()
 
     return app
