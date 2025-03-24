@@ -6,7 +6,11 @@
 **Recipe Box** is a website designed to store, organize, and manage recipes. Users can add their own recipes, categorize them into sections, pin favorite recipes to the homepage, and search for recipes effortlessly.
 
 ## Live Demo
-You can try out the live version of the project hosted on Github Pages: [Recipe Box](https://fzbowers.github.io/recipebox/)
+You can explore the live version of the project, hosted on GitHub Pages, here: 
+[Recipe Box](https://fzbowers.github.io/recipebox/)
+
+### Backend Hosting  
+The backend of this project is hosted on [Railway](https://railway.app), a cloud hosting platform.
 
 ## Features
 - **Add Recipes**: Create and save personal recipes with ease.
